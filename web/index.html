@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Notes</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Mini Notes</h1>
+            <p>A tiny notes app powered by Python and SQLite.</p>
+        </header>
+
+        <section class="card">
+            <h2>Create a note</h2>
+
+            <form id="note-form">
+                <label for="title">Title</label>
+                <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    maxlength="200"
+                    placeholder="What is this note about?"
+                    required
+                >
+
+                <label for="body">Note</label>
+                <textarea
+                    id="body"
+                    name="body"
+                    rows="4"
+                    maxlength="5000"
+                    placeholder="Write something..."
+                    required
+                ></textarea>
+
+                <button type="submit">Save note</button>
+                <p id="message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="notes-section">
+            <h2>Your notes</h2>
+            <div id="notes-list">
+                <p>Loading notes...</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
